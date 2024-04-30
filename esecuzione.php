@@ -1,6 +1,6 @@
 <?php
-$name = $_GET['textUser'];
-$lastname = $_GET['parolaCensurata'];
+$textArea = $_GET['textUser'];
+$parolaCensurata = $_GET['parolaCensurata'];
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +12,7 @@ $lastname = $_GET['parolaCensurata'];
 </head>
 <body>
     
-    <h2>Ciao <?php echo $name; ?> <?php echo $lastname; ?></h2>
+    <h2><?php echo $textArea . ' ' . 'Lughezza stringa:'. ' '. strlen($textArea); ?> </h2>
+    <h2><?php echo str_replace($parolaCensurata,'***',$textArea); ?></h2>
 </body>
 </html>
